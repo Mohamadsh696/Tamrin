@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    // تعریف متغیرها برای ذخیره اسم‌ها
+    char name1[20], name2[20], name3[20];
+
+    // ورود اسم‌ها از کاربر
+    printf("Enter the first name: ");
+    scanf("%s", name1);
+
+    printf("Enter the second name: ");
+    scanf("%s", name2);
+
+    printf("Enter the third name: ");
+    scanf("%s", name3);
+
+    // چاپ حرف اول از هر اسم
+    printf("First letters: %c %c %c\n", name1[0], name2[0], name3[0]);
+
+    return 0;
+}
