@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  // دریافت مقدار جایزه
+  int prize = atoi(getenv("PRIZE"));
+
+  // تعریف آرایه‌ای از اسکناس‌ها
+  int banknotes[] = {20000, 10000, 5000, 1000};
+
+  // تعریف متغیرهای کمکی
+  int i, count;
+
+  // مقدار اولیه‌سازی متغیرها
+  count = 0;
+
+  // محاسبه تعداد اسکناس‌های مورد نیاز
+  for (i = 0; i < sizeof(banknotes) / sizeof(banknotes[0]); i++) {
+    while (prize >= banknotes[i]) {
+      count++;
+      prize -= banknotes[i];
+    }
+  }
+
+  // چاپ تعداد اسکناس‌های مورد نیاز
+  printf("تعداد اسکناس‌های مورد نیاز: %d\n", count);
+
+  return 0;
+}
