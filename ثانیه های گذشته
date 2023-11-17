@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <time.h>
+
+int main() {
+  // دریافت تعداد ثانیه‌های گذشته از آغاز روز
+  int seconds_elapsed = time(NULL);
+
+  // محاسبه زمان
+  int hour = seconds_elapsed / 3600;
+  int minute = (seconds_elapsed % 3600) / 60;
+  int second = seconds_elapsed % 60;
+
+  // چاپ زمان
+  printf("زمان: %02d:%02d:%02d\n", hour, minute, second);
+
+  return 0;
+}
