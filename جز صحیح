@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+  double number = 12.3456;
+
+  // جداسازی عدد اعشاری از جز صحیح
+  int integer = (int)number;
+  double fraction = number - integer;
+
+  // چاپ جز صحیح
+  printf("جز صحیح عدد %lf برابر با %d است.\n", number, integer);
+
+  return 0;
+}
