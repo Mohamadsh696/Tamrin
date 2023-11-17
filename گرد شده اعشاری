@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+  double number = 12.3456;
+
+  // گرد کردن عدد به نزدیکترین عدد صحیح
+  int rounded_number = (int)number;
+
+  // چاپ عدد گرد شده
+  printf("عدد گرد شده %lf برابر با %d است.\n", number, rounded_number);
+
+  return 0;
+}
