@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+  int x;
+
+  printf("x = ");
+  scanf("%d", &x);
+
+  if (x % 2 == 0) {
+    printf("زوج است.\n");
+  } else {
+    printf("فرد است.\n");
+  }
+
+  return 0;
+}
