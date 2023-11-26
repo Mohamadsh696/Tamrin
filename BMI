@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+  float height, weight, bmi;
+
+  printf("قد خود را بر حسب متر وارد کنید: ");
+  scanf("%f", &height);
+
+  printf("وزن خود را بر حسب کیلوگرم وارد کنید: ");
+  scanf("%f", &weight);
+
+  // محاسبه BMI
+  bmi = weight / (height * height);
+
+  // چاپ پیام مناسب
+  if (bmi < 18.5) {
+    printf("BMI شما کمتر از 18.5 است. شما دچار کمبود وزن هستید.");
+  } else if (bmi < 25) {
+    printf("BMI شما بین 18.5 و 25 است. وزن شما طبیعی است.");
+  } else if (bmi < 30) {
+    printf("BMI شما بین 25 و 30 است. شما دچار اضافه وزن هستید.");
+  } else {
+    printf("BMI شما بیشتر از 30 است. شما دچار چاقی هستید.");
+  }
+
+  return 0;
+}
