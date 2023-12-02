@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+  int a, b, c;
+
+  printf("سه عدد را وارد کنید: ");
+  scanf("%d %d %d", &a, &b, &c);
+
+  // ابتدا بزرگترین عدد را پیدا می کنیم.
+  int max = a;
+  if (b > max) {
+    max = b;
+  }
+  if (c > max) {
+    max = c;
+  }
+
+  // بزرگترین عدد را چاپ می کنیم.
+  printf("بزرگترین عدد: %d\n", max);
+
+  return 0;
+}
