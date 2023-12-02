@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+  int a, b;
+  char op;
+
+  printf("دو عدد صحیح و یک عملگر ریاضی وارد کنید: ");
+  scanf("%d %d %c", &a, &b, &op);
+
+  // عملیات ریاضی را انجام می دهیم.
+  int result;
+  switch (op) {
+    case '+':
+      result = a + b;
+      break;
+    case '-':
+      result = a - b;
+      break;
+    case '*':
+      result = a * b;
+      break;
+    case '/':
+      result = a / b;
+      break;
+    default:
+      printf("عملگر وارد شده صحیح نیست.\n");
+      return 0;
+  }
+
+  // حاصل را چاپ می کنیم.
+  printf("حاصل: %d\n", result);
+
+  return 0;
+}
