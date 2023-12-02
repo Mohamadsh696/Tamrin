@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+  int a, b, c;
+
+  printf("طول اضلاع مثلث را وارد کنید: ");
+  scanf("%d %d %d", &a, &b, &c);
+
+  // اگر مجموع دو ضلع کوتاهتر از ضلع بلندتر باشد، امکان ساخت مثلث وجود ندارد.
+  if ((a + b) < c) {
+    printf("NO\n");
+  } else {
+    printf("YES\n");
+  }
+
+  return 0;
+}
