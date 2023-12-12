@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+
+  int num1, num2;
+
+  printf("دو عدد را وارد کنید: ");
+  scanf("%d %d", &num1, &num2);
+
+  int reversed_num1 = 0;
+  int reversed_num2 = 0;
+
+  while (num1 > 0) {
+    reversed_num1 = reversed_num1 * 10 + num1 % 10;
+    num1 /= 10;
+  }
+
+  while (num2 > 0) {
+    reversed_num2 = reversed_num2 * 10 + num2 % 10;
+    num2 /= 10;
+  }
+
+  if (reversed_num1 > reversed_num2) {
+    printf("عدد اول بزرگ تر است.\n");
+  } else if (reversed_num1 < reversed_num2) {
+    printf("عدد دوم بزرگ تر است.\n");
+  } else {
+    printf("دو عدد برابر هستند.\n");
+  }
+
+  return 0;
+}
