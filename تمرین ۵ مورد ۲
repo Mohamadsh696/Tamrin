@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int factorial(int n) {
+  if (n == 0) {
+    return 1;
+  }
+  return n * factorial(n - 1);
+}
+
+int main() {
+  int n;
+
+  printf("یک عدد را وارد کنید: ");
+  scanf("%d", &n);
+
+  int factorial_n = factorial(n);
+
+  printf("فاکتوریل %d برابر با %d است.\n", n, factorial_n);
+
+  return 0;
+}
