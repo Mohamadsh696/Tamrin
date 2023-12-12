@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+
+  int sum = 0;
+  int number;
+
+  while (number != 0) {
+    printf("یک عدد را وارد کنید: ");
+    scanf("%d", &number);
+    sum += number;
+  }
+
+  printf("جمع اعداد وارد شده برابر با %d است.\n", sum);
+
+  return 0;
+}
