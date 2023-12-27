@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+  int list[] = {1, 2, 3, 4, 5};
+  int size = sizeof(list) / sizeof(list[0]);
+  int number;
+
+  printf("Enter the number to be deleted: ");
+  scanf("%d", &number);
+
+  // Initialize the index of the first element not equal to the given number
+  int i = 0;
+
+  // Iterate through the list
+  for (int j = 0; j < size; j++) {
+    if (list[j] != number) {
+      list[i++] = list[j];
+    }
+  }
+
+  // Update the size of the list
+  size = i;
+
+  // Print the updated list
+  printf("The updated list: ");
+  for (int j = 0; j < size; j++) {
+    printf("%d ", list[j]);
+  }
+  printf("\n");
+
+  return 0;
+}
