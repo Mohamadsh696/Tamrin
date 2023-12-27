@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+  int number;
+  // Stack to store the numbers
+  int stack[100];
+  int top = -1;
+
+  // Read numbers from the user
+  while (1) {
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    // If the number is 0, stop reading numbers
+    if (number == 0) {
+      break;
+    }
+
+    // Push the number onto the stack
+    stack[++top] = number;
+  }
+
+  // Print the numbers in reverse order
+  for (int i = top; i >= 0; i--) {
+    printf("%d ", stack[i]);
+  }
+  printf("\n");
+
+  return 0;
+}
