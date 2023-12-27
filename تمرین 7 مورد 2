@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main() {
+  int rows, cols;
+
+  printf("Enter the number of rows: ");
+  scanf("%d", &rows);
+
+  printf("Enter the number of columns: ");
+  scanf("%d", &cols);
+
+  // Initialize the array
+  int array[rows][cols];
+  for (int i = 0; i < rows; i++) {
+    for (int j = 0; j < cols; j++) {
+      printf("Enter the element at [%d][%d]: ", i, j);
+      scanf("%d", &array[i][j]);
+    }
+  }
+
+  // Swap the first and last rows
+  int temp[cols];
+  for (int j = 0; j < cols; j++) {
+    temp[j] = array[0][j];
+    array[0][j] = array[rows - 1][j];
+    array[rows - 1][j] = temp[j];
+  }
+
+  // Print the array
+  for (int i = 0; i < rows; i++) {
+    for (int j = 0; j < cols; j++) {
+      printf("%d ", array[i][j]);
+    }
+    printf("\n");
+  }
+
+  return 0;
+}
