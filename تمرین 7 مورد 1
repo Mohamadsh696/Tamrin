@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+// Function to swap two elements in a list
+void swap(int *a, int *b) {
+  int temp = *a;
+  *a = *b;
+  *b = temp;
+}
+
+// Function to sort a list in descending order
+void sort(int *list, int size) {
+  for (int i = 0; i < size - 1; i++) {
+    for (int j = i + 1; j < size; j++) {
+      if (list[i] < list[j]) {
+        swap(&list[i], &list[j]);
+      }
+    }
+  }
+}
+
+int main() {
+  int list[] = {10, 5, 2, 7, 9};
+  int size = sizeof(list) / sizeof(list[0]);
+
+  // Print the unsorted list
+  printf("Unsorted list: ");
+  for (int i = 0; i < size; i++) {
+    printf("%d ", list[i]);
+  }
+  printf("\n");
+
+  // Sort the list
+  sort(list, size);
+
+  // Print the sorted list
+  printf("Sorted list: ");
+  for (int i = 0; i < size; i++) {
+    printf("%d ", list[i]);
+  }
+  printf("\n");
+
+  return 0;
+}
